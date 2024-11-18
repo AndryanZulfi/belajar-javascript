@@ -1,15 +1,14 @@
 function fearNotLetter(str) {
     const word = "abcdefghijklmnopqrstuvwxyz";
-    let regex = new RegExp(`[${str[0]}-${str[str.length - 1]}]`, "g")
-    return word !== str ? word.match(regex).filter(el => {
+    return word !== str ? word.split('').filter(el => {
         return  !str.split('').includes(el) 
     }) : undefined
 
   }
   
-  console.log(fearNotLetter("abdfghjlnprtvwxyz"))
+  console.log(fearNotLetter("abcdefghijlmnoqrsuvwxyz"))
 
-
+ 
 // function fearNotLetter(str) {
 //     const word = "abcdefghijklmnopqrstuvwxyz";
 //     let regex = new RegExp(`[${str[0]}-${str[str.length - 1]}]`, "g");
